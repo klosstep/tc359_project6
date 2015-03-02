@@ -1,0 +1,41 @@
+<!Doctype HTML>
+<html>
+	<head>
+		<title>Holidays API</title>
+		<link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+		<script src="js/main.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1><strong>Holidays API</strong></h1>
+				</div>
+			</div>
+			<div class="row">
+        <div class="col-md-6">
+          <h2>Input</h2>
+          <form>
+            <select name="country" class="form-control">
+              <% ["US","GB","BR","BE"].each do |country| %>
+                <option value="<%= country %>" <%= 'selected="selected"' if params[:country] == country %>><%= country %></option>
+              <% end %> 
+            </select>
+            <input name="year" type="number" class="form-control" value="<%= params[:year] %>">
+            <input name="month" type="number" class="form-control" value="<%= params[:month] %>">
+            <button type="submit">Go</button>
+          </form>
+        </div>
+
+				<div class="col-md-6">
+					<h2 class="holidays">Holidays</h2>
+						<% @holidays_input.each do |holidays| %>
+              <ul><%= holidays[0]["date"] %>, <%= holidays[0]["name"] %>, <%= holidays[0]["country"] %></ul>
+						<% end %>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

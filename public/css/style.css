@@ -1,0 +1,29 @@
+
+form {
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+	background: #cfcfcf;
+	border-radius: 10px;
+  box-shadow: -5px 10px 10px #666666;
+}
+
+
+.row {
+	text-align: center;
+	font-family: helvetica;
+	padding-bottom: 20px;
+}
+
+h2{
+	padding-bottom: 20px;
+}
+
+.holidays {
+  padding-left: 40px;
+
+}
