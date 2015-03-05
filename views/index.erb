@@ -22,8 +22,8 @@
                 <option value="<%= country %>" <%= 'selected="selected"' if params[:country] == country %>><%= country %></option>
               <% end %> 
             </select>
-            <input name="year" type="number" class="form-control" value="<%= params[:year] %>">
-            <input name="month" type="number" class="form-control" value="<%= params[:month] %>">
+            <input name="year" type="number" class="form-control" value="<%= params[:year] %>" required>
+            <input name="month" type="number" class="form-control" value="<%= params[:month] %>"required>
             <button type="submit">Go</button>
           </form>
         </div>
